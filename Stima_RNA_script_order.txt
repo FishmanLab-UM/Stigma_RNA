@@ -1,0 +1,38 @@
+RNA Stigma Script Order
+
+1.) RNA_trimmomatic.sh
+
+2.) RNA_star_script.sh
+	Calls the "GenomeDir" directory populated by star aligner (see manual: chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf)
+	This directory contains the following files
+	a.)chrLength.txt
+	b.)chrName.txt
+	c.)chrNameLength.txt
+	d.)chrStart.txt
+	e.)exonGeTrinfo.tab
+	f.)exonInfo.tab
+	g.)geneInfo.tab
+	h.)Genome
+	i.)genomeParameters.txt
+	j.)Log.out
+	k.)SA (too large for GitHub)
+	l.)SAindex
+	m.)sjdbInfo.txt
+	n.)sjdbList.fromGTF.out.tab
+	o.)sjdbList.out.tab
+	p.)transcriptInfo.tab 
+
+
+3.) gunzip_paired_fastqs.sh
+
+4.) samtools_filter_and_sam_to_bam.sh
+
+5.) samtools_sort_bams.sh
+
+6.) picard_mark_duplicates_and_remove.sh
+
+7.) GATK_splitNcigarReads.sh
+
+8.) samtools_view_filtered_alignments.sh
+
+9.) htseq_for_loop.sh 
